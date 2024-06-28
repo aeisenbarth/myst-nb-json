@@ -37,6 +37,7 @@ docs = [
     "docutils>=0.21.2",
     "ipython>=8.12.0",
     "myst-nb>=1.0.0",
+    "pydantic>=2.0",
     "Sphinx>=7.2.6",
     "sphinx-book-theme>=1.1.3",
 ]
@@ -48,7 +49,9 @@ test = [
     "selenium~=4.22",
     "Sphinx[test]>=7.2.6", # For test dependencies like defusedxml
 ]
-type-hints = ["types-docutils"]
+type-hints = [
+    "types-docutils>=0.21.0.20240423",
+]
 
 [project.entry-points."myst_nb.mime_renderers"]
 application_json = "myst_nb_json:JsonMimeRenderPlugin"
