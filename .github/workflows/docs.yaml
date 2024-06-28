@@ -1,0 +1,33 @@
+name: Build docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sphinx_docs_to_gh-pages:
+    name: Sphinx docs to gh-pages
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v3
+        with:
+          python-version: "3.12"
+          cache: true
+      - name: Install dependencies
+        run: pdm sync
+      - name: Run the Sphinx to gh-pages action
+        uses: uibcdf/action-sphinx-docs-to-gh-pages@v2.1.0
+        with:
+          branch: main
+          dir_docs: docs
