@@ -48,10 +48,11 @@ jobs:
     name: Publish to PyPI
     if: github.ref_type == 'tag'
     needs: [tests, linting]
+    runs-on: ubuntu-latest
+    environment: release
     permissions:
       # IMPORTANT: this permission is mandatory for trusted publishing
       id-token: write
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
