@@ -1,0 +1,58 @@
+div.myst-nb-json-value > ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-left: 1.5em;
+}
+
+li.myst-nb-json-collapsed > div.myst-nb-json-value {
+  display: none;
+}
+
+span.myst-nb-json-key {
+  color: #008000;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0px 0.5em 0px 0px;
+  padding: 0;
+  user-select: all;
+}
+
+span.myst-nb-json-key.myst-nb-json-collapsible::before {
+  color: black;
+  content: "▼";
+  display: inline-block;
+  font-size: 0.75em;
+  margin-left: -1.25em;
+  position: relative;
+  top: -0.15em;
+  transform: rotateZ(0deg);
+  transform-origin: 40% 50% 0;
+  transition: 150ms;
+  user-select: none;
+  width: 1.25em;
+}
+
+li.myst-nb-json-collapsed > span.myst-nb-json-key.myst-nb-json-collapsible::before {
+  transform: rotateZ(-90deg);
+}
+
+span.myst-nb-json-value {
+  color: #ba2121;
+  text-indent: -0.5em;
+  user-select: all;
+}
+
+span.myst-nb-json-hidden {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+}
+
+.myst-nb-json-unselectable {
+  user-select: none !important;
+}

@@ -1,0 +1,113 @@
+<document source="json_output" translation_progress="{'total': 0, 'translated': 0}">
+    <container cell_index="0" cell_metadata="{}" classes="cell" exec_count="1" nb_element="cell_code">
+        <container classes="cell_input" nb_element="cell_code_source">
+            <literal_block language="ipython3" linenos="False" xml:space="preserve">
+                from IPython.display import JSON
+                
+                JSON(
+                    {
+                        "key1": "value1",
+                        "key2": {
+                            "key21": "str",
+                            "key22": 42,
+                            "key23": 3.14,
+                            "key24": True,
+                            "key25": False,
+                            "key26": None,
+                            "key27": {},
+                            "key28": [],
+                        },
+                        "key3": ["str", 42, 3.14, True, False, None, {}, []],
+                    },
+                    root="test",
+                    expanded=True,
+                )
+        <container classes="cell_output" nb_element="cell_code_output">
+            <raw classes="output text_html" format="html" xml:space="preserve">
+                <div><div class="myst-nb-json-value"><ul><li><span class="myst-nb-json-key myst-nb-json-collapsible myst-nb-json-unselectable" tabindex=0><span class="myst-nb-json-hidden">"</span>test<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrace;</span><ul><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key1<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">"value1"</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key myst-nb-json-collapsible" tabindex=0><span class="myst-nb-json-hidden">"</span>key2<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrace;</span><ul><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key21<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">"str"</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key22<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">42</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key23<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">3.14</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key24<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">true</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key25<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">false</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key26<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">null</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key27<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">{}</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key28<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">[]</span></li></ul><span class="myst-nb-json-hidden">&rbrace;</span><span class="myst-nb-json-hidden">, </span></div></li><li class=""><span class="myst-nb-json-key myst-nb-json-collapsible" tabindex=0><span class="myst-nb-json-hidden">"</span>key3<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrack;</span><ul><li class=""><span class="myst-nb-json-value">"str"</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">42</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">3.14</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">true</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">false</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">null</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">{}</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">[]</span></li></ul><span class="myst-nb-json-hidden">&rbrack;</span></div></li></ul><span class="myst-nb-json-hidden">&rbrace;</span></div></li></ul></div><style>div.myst-nb-json-value > ul {
+                  display: inline-block;
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                }
+                
+                li {
+                  padding-left: 1.5em;
+                }
+                
+                li.myst-nb-json-collapsed > div.myst-nb-json-value {
+                  display: none;
+                }
+                
+                span.myst-nb-json-key {
+                  color: #008000;
+                  display: inline-block;
+                  font-weight: bold;
+                  margin: 0px 0.5em 0px 0px;
+                  padding: 0;
+                  user-select: all;
+                }
+                
+                span.myst-nb-json-key.myst-nb-json-collapsible::before {
+                  color: black;
+                  content: "▼";
+                  display: inline-block;
+                  font-size: 0.75em;
+                  margin-left: -1.25em;
+                  position: relative;
+                  top: -0.15em;
+                  transform: rotateZ(0deg);
+                  transform-origin: 40% 50% 0;
+                  transition: 150ms;
+                  user-select: none;
+                  width: 1.25em;
+                }
+                
+                li.myst-nb-json-collapsed > span.myst-nb-json-key.myst-nb-json-collapsible::before {
+                  transform: rotateZ(-90deg);
+                }
+                
+                span.myst-nb-json-value {
+                  color: #ba2121;
+                  text-indent: -0.5em;
+                  user-select: all;
+                }
+                
+                span.myst-nb-json-hidden {
+                  display: inline-block;
+                  opacity: 0;
+                  width: 0;
+                }
+                
+                .myst-nb-json-unselectable {
+                  user-select: none !important;
+                }
+                </style><script defer>// Script to be embedded inside the component's root HTMLElement
+                (function (component) {
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const CLASS_KEY = "myst-nb-json-key";
+                        const CLASS_COLLAPSIBLE = "myst-nb-json-collapsible";
+                        const CLASS_COLLAPSED = "myst-nb-json-collapsed";
+                
+                        let toggleable = Array.from(component.getElementsByTagName("li"));
+                        toggleable.forEach((li) => {
+                            // Find list item elements that contain a nested, collapsible value.
+                            if (li.getElementsByClassName(CLASS_COLLAPSIBLE).length == 0) return;
+                            let key = li.getElementsByClassName(CLASS_KEY)[0];
+                            let toggleFn = function() {
+                                let isCollapsed = li.classList.contains(CLASS_COLLAPSED);
+                                if (isCollapsed) {
+                                    li.classList.remove(CLASS_COLLAPSED);
+                                } else {
+                                    li.classList.add(CLASS_COLLAPSED);
+                                }
+                            }
+                            // Make the key element interactive to toggle the list item's collapsed state.
+                            key.addEventListener("click", toggleFn);
+                            key.addEventListener("keydown", (event) => {
+                                if (event.code === "ArrowLeft" || event.code === "ArrowRight" || event.code === "Space") toggleFn()
+                            });
+                        });
+                    });
+                })(document.currentScript.parentElement);
+                </script></div>
