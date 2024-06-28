@@ -17,9 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: pdm-project/setup-pdm@v3
-        name: Setup PDM
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v3
         with:
           python-version: ${{ matrix.python-version }}
           cache: true
@@ -31,9 +32,10 @@ jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pdm-project/setup-pdm@v3
-        name: Setup PDM
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v3
         with:
           python-version: "3.12"
           cache: true
@@ -51,7 +53,7 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
+      - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup PDM
         uses: pdm-project/setup-pdm@v3
