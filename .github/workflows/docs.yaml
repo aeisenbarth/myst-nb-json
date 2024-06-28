@@ -26,8 +26,31 @@ jobs:
           cache: true
       - name: Install dependencies
         run: pdm sync
-      - name: Run the Sphinx to gh-pages action
-        uses: uibcdf/action-sphinx-docs-to-gh-pages@v2.1.0
-        with:
-          branch: main
-          dir_docs: docs
+      - name: Build docs
+        run: pdm docs
+      - name: Create .nojekyll in case 'sphinx.ext.githubpages' is not used
+        run: touch "docs/_build/.nojekyll"
+      - name: Set the committer name and email
+        run: |
+          author_name="$(git show --format=%an -s)"
+          author_email="$(git show --format=%ae -s)"
+          git config user.name "$author_name"
+          git config user.email "$author_email"
+      - name: Create gh-pages branch if needed
+        run: |
+          if [[ -z "$(git ls-remote --heads origin gh-pages)" ]]; then
+             echo "Creating gh-pages branch"
+             git checkout --orphan gh-pages
+             git reset --hard
+             git commit --allow-empty -m "First commit to create gh-pages branch"
+             git push origin gh-pages
+             echo "Created gh-pages branch"
+             git checkout "$GITHUB_REF"
+          else
+             echo "Branch gh-pages already exists"
+          fi
+      - name: Commit to gh-pages branch and push
+        run: |
+          git add -f "docs/_build/"
+          git commit -m "From $GITHUB_REF $GITHUB_SHA"
+          git push origin `git subtree split --prefix "docs/_build/" "$GITHUB_REF"`:gh-pages --force
