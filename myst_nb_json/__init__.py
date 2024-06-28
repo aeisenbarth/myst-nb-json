@@ -3,7 +3,7 @@ MimeRenderPlugin for MyST-NB for rendering IPython JSON display type to HTML
 """
 
 __all__ = ["JsonMimeRenderPlugin"]
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 import json
 from collections.abc import Generator, Mapping, Sequence
