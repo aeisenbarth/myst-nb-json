@@ -1,0 +1,12 @@
+/*
+  myst-nb renders cells as div block elements with border. However, output cells are separated by a
+  gap from their input cells, which makes the notebook more visually cluttered. Remove the gap.
+*/
+.cell .cell_input + .cell_output  {
+  margin-top: 0;
+}
+.cell .cell_input + .cell_output .output  {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
