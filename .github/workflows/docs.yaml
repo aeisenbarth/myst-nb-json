@@ -3,7 +3,7 @@ name: Build docs
 on:
   push:
     branches:
-      - main
+      - "*"
 
 jobs:
   sphinx_docs_to_gh-pages:
