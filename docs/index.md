@@ -19,9 +19,12 @@ This is the case for the `application/json` type:
 
 It is nicely rendered in Jupyter because Jupyter includes a
 [JSON renderer](https://github.com/jupyterlab/jupyterlab/tree/7909745d075aceb0cf1099ad53a3174e92b575ae/packages/json-extension),
-but MyST-NB can only use IPython's built-ins which display as `<IPython.core.display.JSON object>`.
+but [MyST-NB](https://myst-nb.readthedocs.io) can only use IPython's built-ins which display as
+`<IPython.core.display.JSON object>`.
 
 ## Installation
+
+Make sure `Sphinx` and `myst-nb` are installed, this package is meant to be used with them.
 
 Install the Python package:
 

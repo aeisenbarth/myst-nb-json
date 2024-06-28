@@ -9,6 +9,7 @@ repos:
       - id: check-merge-conflict
       - id: end-of-file-fixer
       - id: trailing-whitespace
+        exclude: tests/test_myst_nb/.*\.xml
   - repo: https://github.com/python/black
     rev: 22.3.0
     hooks:
