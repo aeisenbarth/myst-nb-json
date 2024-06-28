@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Examples &#8212; MyST-NB JSON 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5268d2fb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=a1637f0b"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Development" href="development.html" />
+    <link rel="prev" title="MyST-NB JSON" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">MyST-NB JSON 0.1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/aeisenbarth/myst-nb-json" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-gitlab"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Examples</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
+<p>A JSON-like Python dictionary renders the full Python object as <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> (notice the single quotes).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;key21&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;key22&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;key23&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+    <span class="s2">&quot;key3&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">],</span>
+<span class="p">}</span>
+<span class="n">json_dict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;key1&#39;: &#39;value1&#39;,
+ &#39;key2&#39;: {&#39;key21&#39;: 42, &#39;key22&#39;: True, &#39;key23&#39;: None},
+ &#39;key3&#39;: [&#39;a&#39;, &#39;b&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>It can be wrapped in an output type, which adds the MIME type <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">JSON</span>
+
+<span class="n">JSON</span><span class="p">(</span><span class="n">json_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>However, there are two issues with this:</p>
+<ul class="simple">
+<li><p>Now <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> is <code class="docutils literal notranslate"><span class="pre">&lt;IPython.core.display.JSON</span> <span class="pre">object&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">application/json</span></code>’s data is the original JSON, and it is left up to renderers how to represent it.</p></li>
+</ul>
+<p>Jupyter Lab renders the following:</p>
+<p><img alt="Screenshot of json_dict in Jupyter" src="_images/example1-jupyter.png" /></p>
+<p>Whereas MyST-NB renders:</p>
+<p><img alt="Screenshot of json_dict in HTML by MyST-NB" src="_images/example1-myst-nb.png" /></p>
+<p>With <code class="docutils literal notranslate"><span class="pre">myst-nb-json</span></code>, you should get an interactive rendering similar to Jupyter Lab:</p>
+<p><img alt="Screenshot of json_dict in HTML with myst-nb-json" src="_images/example1-myst-nb-json.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">JSON</span>
+
+<span class="n">JSON</span><span class="p">(</span><span class="n">json_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><div class="myst-nb-json-value"><ul><li><span class="myst-nb-json-key myst-nb-json-collapsible myst-nb-json-unselectable" tabindex=0><span class="myst-nb-json-hidden">"</span>root<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrace;</span><ul><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key1<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">"value1"</span><span class="myst-nb-json-hidden">, </span></li><li class="myst-nb-json-collapsed"><span class="myst-nb-json-key myst-nb-json-collapsible" tabindex=0><span class="myst-nb-json-hidden">"</span>key2<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrace;</span><ul><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key21<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">42</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key22<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">true</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key23<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">null</span></li></ul><span class="myst-nb-json-hidden">&rbrace;</span><span class="myst-nb-json-hidden">, </span></div></li><li class="myst-nb-json-collapsed"><span class="myst-nb-json-key myst-nb-json-collapsible" tabindex=0><span class="myst-nb-json-hidden">"</span>key3<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrack;</span><ul><li class=""><span class="myst-nb-json-value">"a"</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">"b"</span></li></ul><span class="myst-nb-json-hidden">&rbrack;</span></div></li></ul><span class="myst-nb-json-hidden">&rbrace;</span></div></li></ul></div><style>div.myst-nb-json-value > ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-left: 1.5em;
+}
+
+li.myst-nb-json-collapsed > div.myst-nb-json-value {
+  display: none;
+}
+
+span.myst-nb-json-key {
+  color: #008000;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0px 0.5em 0px 0px;
+  padding: 0;
+  user-select: all;
+}
+
+span.myst-nb-json-key.myst-nb-json-collapsible::before {
+  color: black;
+  content: "▼";
+  display: inline-block;
+  font-size: 0.75em;
+  margin-left: -1.25em;
+  position: relative;
+  top: -0.15em;
+  transform: rotateZ(0deg);
+  transform-origin: 40% 50% 0;
+  transition: 150ms;
+  user-select: none;
+  width: 1.25em;
+}
+
+li.myst-nb-json-collapsed > span.myst-nb-json-key.myst-nb-json-collapsible::before {
+  transform: rotateZ(-90deg);
+}
+
+span.myst-nb-json-value {
+  color: #ba2121;
+  text-indent: -0.5em;
+  user-select: all;
+}
+
+span.myst-nb-json-hidden {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+}
+
+.myst-nb-json-unselectable {
+  user-select: none !important;
+}
+</style><script defer>// Script to be embedded inside the component's root HTMLElement
+(function (component) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const CLASS_KEY = "myst-nb-json-key";
+        const CLASS_COLLAPSIBLE = "myst-nb-json-collapsible";
+        const CLASS_COLLAPSED = "myst-nb-json-collapsed";
+
+        let toggleable = Array.from(component.getElementsByTagName("li"));
+        toggleable.forEach((li) => {
+            // Find list item elements that contain a nested, collapsible value.
+            if (li.getElementsByClassName(CLASS_COLLAPSIBLE).length == 0) return;
+            let key = li.getElementsByClassName(CLASS_KEY)[0];
+            let toggleFn = function() {
+                let isCollapsed = li.classList.contains(CLASS_COLLAPSED);
+                if (isCollapsed) {
+                    li.classList.remove(CLASS_COLLAPSED);
+                } else {
+                    li.classList.add(CLASS_COLLAPSED);
+                }
+            }
+            // Make the key element interactive to toggle the list item's collapsed state.
+            key.addEventListener("click", toggleFn);
+            key.addEventListener("keydown", (event) => {
+                if (event.code === "ArrowLeft" || event.code === "ArrowRight" || event.code === "Space") toggleFn()
+            });
+        });
+    });
+})(document.currentScript.parentElement);
+</script></div></div></div>
+</div>
+<p>With the <code class="docutils literal notranslate"><span class="pre">expanded</span></code> parameter, you can control how much to show by default:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">JSON</span><span class="p">(</span><span class="n">json_dict</span><span class="p">,</span> <span class="n">expanded</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><div class="myst-nb-json-value"><ul><li><span class="myst-nb-json-key myst-nb-json-collapsible myst-nb-json-unselectable" tabindex=0><span class="myst-nb-json-hidden">"</span>root<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrace;</span><ul><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key1<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">"value1"</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key myst-nb-json-collapsible" tabindex=0><span class="myst-nb-json-hidden">"</span>key2<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrace;</span><ul><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key21<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">42</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key22<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">true</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key23<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">null</span></li></ul><span class="myst-nb-json-hidden">&rbrace;</span><span class="myst-nb-json-hidden">, </span></div></li><li class=""><span class="myst-nb-json-key myst-nb-json-collapsible" tabindex=0><span class="myst-nb-json-hidden">"</span>key3<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrack;</span><ul><li class=""><span class="myst-nb-json-value">"a"</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">"b"</span></li></ul><span class="myst-nb-json-hidden">&rbrack;</span></div></li></ul><span class="myst-nb-json-hidden">&rbrace;</span></div></li></ul></div><style>div.myst-nb-json-value > ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-left: 1.5em;
+}
+
+li.myst-nb-json-collapsed > div.myst-nb-json-value {
+  display: none;
+}
+
+span.myst-nb-json-key {
+  color: #008000;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0px 0.5em 0px 0px;
+  padding: 0;
+  user-select: all;
+}
+
+span.myst-nb-json-key.myst-nb-json-collapsible::before {
+  color: black;
+  content: "▼";
+  display: inline-block;
+  font-size: 0.75em;
+  margin-left: -1.25em;
+  position: relative;
+  top: -0.15em;
+  transform: rotateZ(0deg);
+  transform-origin: 40% 50% 0;
+  transition: 150ms;
+  user-select: none;
+  width: 1.25em;
+}
+
+li.myst-nb-json-collapsed > span.myst-nb-json-key.myst-nb-json-collapsible::before {
+  transform: rotateZ(-90deg);
+}
+
+span.myst-nb-json-value {
+  color: #ba2121;
+  text-indent: -0.5em;
+  user-select: all;
+}
+
+span.myst-nb-json-hidden {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+}
+
+.myst-nb-json-unselectable {
+  user-select: none !important;
+}
+</style><script defer>// Script to be embedded inside the component's root HTMLElement
+(function (component) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const CLASS_KEY = "myst-nb-json-key";
+        const CLASS_COLLAPSIBLE = "myst-nb-json-collapsible";
+        const CLASS_COLLAPSED = "myst-nb-json-collapsed";
+
+        let toggleable = Array.from(component.getElementsByTagName("li"));
+        toggleable.forEach((li) => {
+            // Find list item elements that contain a nested, collapsible value.
+            if (li.getElementsByClassName(CLASS_COLLAPSIBLE).length == 0) return;
+            let key = li.getElementsByClassName(CLASS_KEY)[0];
+            let toggleFn = function() {
+                let isCollapsed = li.classList.contains(CLASS_COLLAPSED);
+                if (isCollapsed) {
+                    li.classList.remove(CLASS_COLLAPSED);
+                } else {
+                    li.classList.add(CLASS_COLLAPSED);
+                }
+            }
+            // Make the key element interactive to toggle the list item's collapsed state.
+            key.addEventListener("click", toggleFn);
+            key.addEventListener("keydown", (event) => {
+                if (event.code === "ArrowLeft" || event.code === "ArrowRight" || event.code === "Space") toggleFn()
+            });
+        });
+    });
+})(document.currentScript.parentElement);
+</script></div></div></div>
+</div>
+<p>With the <code class="docutils literal notranslate"><span class="pre">root</span></code> parameter, you can control the display name:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">JSON</span><span class="p">(</span><span class="n">json_dict</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="s2">&quot;json_dict&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><div class="myst-nb-json-value"><ul><li><span class="myst-nb-json-key myst-nb-json-collapsible myst-nb-json-unselectable" tabindex=0><span class="myst-nb-json-hidden">"</span>json_dict<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrace;</span><ul><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key1<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">"value1"</span><span class="myst-nb-json-hidden">, </span></li><li class="myst-nb-json-collapsed"><span class="myst-nb-json-key myst-nb-json-collapsible" tabindex=0><span class="myst-nb-json-hidden">"</span>key2<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrace;</span><ul><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key21<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">42</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key22<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">true</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-key" tabindex=0><span class="myst-nb-json-hidden">"</span>key23<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><span class="myst-nb-json-value">null</span></li></ul><span class="myst-nb-json-hidden">&rbrace;</span><span class="myst-nb-json-hidden">, </span></div></li><li class="myst-nb-json-collapsed"><span class="myst-nb-json-key myst-nb-json-collapsible" tabindex=0><span class="myst-nb-json-hidden">"</span>key3<span class="myst-nb-json-hidden">"</span><span class="myst-nb-json-hidden">: </span></span><div class="myst-nb-json-value"><span class="myst-nb-json-hidden">&lbrack;</span><ul><li class=""><span class="myst-nb-json-value">"a"</span><span class="myst-nb-json-hidden">, </span></li><li class=""><span class="myst-nb-json-value">"b"</span></li></ul><span class="myst-nb-json-hidden">&rbrack;</span></div></li></ul><span class="myst-nb-json-hidden">&rbrace;</span></div></li></ul></div><style>div.myst-nb-json-value > ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-left: 1.5em;
+}
+
+li.myst-nb-json-collapsed > div.myst-nb-json-value {
+  display: none;
+}
+
+span.myst-nb-json-key {
+  color: #008000;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0px 0.5em 0px 0px;
+  padding: 0;
+  user-select: all;
+}
+
+span.myst-nb-json-key.myst-nb-json-collapsible::before {
+  color: black;
+  content: "▼";
+  display: inline-block;
+  font-size: 0.75em;
+  margin-left: -1.25em;
+  position: relative;
+  top: -0.15em;
+  transform: rotateZ(0deg);
+  transform-origin: 40% 50% 0;
+  transition: 150ms;
+  user-select: none;
+  width: 1.25em;
+}
+
+li.myst-nb-json-collapsed > span.myst-nb-json-key.myst-nb-json-collapsible::before {
+  transform: rotateZ(-90deg);
+}
+
+span.myst-nb-json-value {
+  color: #ba2121;
+  text-indent: -0.5em;
+  user-select: all;
+}
+
+span.myst-nb-json-hidden {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+}
+
+.myst-nb-json-unselectable {
+  user-select: none !important;
+}
+</style><script defer>// Script to be embedded inside the component's root HTMLElement
+(function (component) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const CLASS_KEY = "myst-nb-json-key";
+        const CLASS_COLLAPSIBLE = "myst-nb-json-collapsible";
+        const CLASS_COLLAPSED = "myst-nb-json-collapsed";
+
+        let toggleable = Array.from(component.getElementsByTagName("li"));
+        toggleable.forEach((li) => {
+            // Find list item elements that contain a nested, collapsible value.
+            if (li.getElementsByClassName(CLASS_COLLAPSIBLE).length == 0) return;
+            let key = li.getElementsByClassName(CLASS_KEY)[0];
+            let toggleFn = function() {
+                let isCollapsed = li.classList.contains(CLASS_COLLAPSED);
+                if (isCollapsed) {
+                    li.classList.remove(CLASS_COLLAPSED);
+                } else {
+                    li.classList.add(CLASS_COLLAPSED);
+                }
+            }
+            // Make the key element interactive to toggle the list item's collapsed state.
+            key.addEventListener("click", toggleFn);
+            key.addEventListener("keydown", (event) => {
+                if (event.code === "ArrowLeft" || event.code === "ArrowRight" || event.code === "Space") toggleFn()
+            });
+        });
+    });
+})(document.currentScript.parentElement);
+</script></div></div></div>
+</div>
+<p>This is also nice for <strong>Pydantic</strong> models! By default, they are rendered as plain text:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+
+<span class="k">class</span> <span class="nc">Model2</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">key21</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">key22</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">key23</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">ExampleModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">key1</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">key2</span><span class="p">:</span> <span class="n">Model2</span>
+    <span class="n">key3</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">class</span> <span class="nc">Model2</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">key21</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pydantic&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_model</span> <span class="o">=</span> <span class="n">ExampleModel</span><span class="p">(</span><span class="o">**</span><span class="n">json_dict</span><span class="p">)</span>
+<span class="n">example_model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">JSON</span><span class="p">(</span><span class="n">example_model</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;json&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a bonus, MyST-NB has been designed that despite the simplified rendering, when you <strong>select and copy</strong> the text, it will include valid JSON.</p>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">MyST-NB JSON</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="development.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Development</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Andreas Eisenbarth
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Andreas Eisenbarth.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
