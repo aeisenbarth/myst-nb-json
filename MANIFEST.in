@@ -1,0 +1,15 @@
+exclude docs
+recursive-exclude docs *
+exclude tests
+recursive-exclude tests *.js *.css
+include myst_nb_json/resources/*.js
+include myst_nb_json/resources/*.css
+
+exclude .pre-commit-config.yaml
+exclude .readthedocs.yaml
+
+include LICENSE
+include README.md
+include AUTHORS.md
+include CONTRIBUTING.md
+include src/myst_nb_json/py.typed
