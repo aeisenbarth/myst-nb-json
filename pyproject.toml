@@ -56,6 +56,13 @@ type-hints = [
 [project.entry-points."myst_nb.mime_renderers"]
 application_json = "myst_nb_json:JsonMimeRenderPlugin"
 
+[project.urls]
+homepage = "https://github.com/aeisenbarth/myst-nb-json/"
+repository = "https://github.com/aeisenbarth/myst-nb-json.git"
+documentation = "https://aeisenbarth.github.io/myst-nb-json/"
+issues = "https://github.com/aeisenbarth/myst-nb-json/issues/"
+changelog = "https://github.com/aeisenbarth/myst-nb-json/main/CHANGELOG.md"
+
 [tool.black]
 line-length = 100
 target-version = ['py310']
