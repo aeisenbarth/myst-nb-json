@@ -26,3 +26,8 @@ but [MyST-NB](https://myst-nb.readthedocs.io) can only use IPython's built-ins w
 ## MyST-NB with myst-nb-json plugin
 
 ![Screenshot of json_dict in HTML with myst-nb-json](./docs/images/example1-myst-nb-json.png)
+
+## Implementation
+
+This package requires (besides MyST-NB) no other dependencies. The front-end code is written in
+plain HTML/JavaScript, avoiding heavy dependencies and built steps.
