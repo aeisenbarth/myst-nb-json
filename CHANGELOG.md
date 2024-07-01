@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -->
 
+## 0.1.2 - 2024-07-01
+
+### Added
+
+- Project URLs in metadata
+
 ## 0.1.1 - 2024-06-28
 
 ### Added
